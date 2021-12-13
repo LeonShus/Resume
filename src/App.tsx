@@ -1,13 +1,16 @@
 import React from "react";
-import classes from "./App.module.css"
+// import classes from "./App.module.css"
 import {Header} from "./Components/Header/Header";
-import {Main} from "./Components/Main/Main";
+import {Skills} from "./Components/Skills/Skills";
 
 export const App = () => {
     return (
         <div>
             <Header/>
-            <Main/>
+
+            <Skills/>
+
+
         </div>
     );
 }
