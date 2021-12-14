@@ -1,0 +1,30 @@
+.container{
+    background-color: #6ff876;
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.formContainer {
+    width: 80%;
+    border: 1px solid;
+    min-width: 360px;
+    margin: auto;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.nameInp{
+    width: 40%;
+    height: 30px;
+    padding: 10px;
+    font-size: 1.3rem;
+}
+.textInp{
+    width: 80%;
+    padding: 10px;
+    font-size: 1.3rem;
+}
