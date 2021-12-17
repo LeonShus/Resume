@@ -1,0 +1,20 @@
+.container{
+    background-color: #1E90FF;
+    width: 100vw;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contentContainer {
+    border: 1px solid;
+    min-width: 340px;
+    width: 80%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+
+}
+.contentContainer img{
+    height: 80px;
+}

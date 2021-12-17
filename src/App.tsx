@@ -5,6 +5,7 @@ import {Skills} from "./Components/Skills/Skills";
 import {Main} from "./Components/Main/Main";
 import {MyProj} from "./Components/MyProj/MyProj";
 import {Feedback} from "./Components/Feedback/Feedback";
+import {Footer} from "./Components/Footer/Footer";
 
 export const App = () => {
     return (
@@ -14,6 +15,7 @@ export const App = () => {
             <Skills/>
             <MyProj/>
             <Feedback/>
+            <Footer/>
         </div>
     );
 }
