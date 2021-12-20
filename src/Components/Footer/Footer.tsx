@@ -5,6 +5,7 @@ import defImg from "../../default/img/React_IMG.jpeg"
 export const Footer = () => {
     return (
         <div className={styles.container}>
+            <h2>Leonid Shustov</h2>
             <div className={styles.contentContainer}>
                 <img src={defImg} alt="link"/>
                 <img src={defImg} alt="link"/>
