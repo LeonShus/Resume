@@ -7,7 +7,8 @@ export const Feedback = () => {
     const formik = useFormik({
         initialValues: {
             name: "",
-            text: "",
+            info: "",
+            text: ""
         },
         validationSchema: Yup.object({
             name: Yup.string()
@@ -33,6 +34,14 @@ export const Feedback = () => {
                             type="text"
                             onChange={formik.handleChange}
                             value={formik.values.name}
+                        />
+                        <span>Lorem</span>
+                        <input
+                            className={styles.nameInp}
+                            name={"info"}
+                            type="text"
+                            onChange={formik.handleChange}
+                            value={formik.values.info}
                         />
                         <span>Lorem</span>
                         <textarea className={styles.textInp}

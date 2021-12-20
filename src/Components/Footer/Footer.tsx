@@ -12,6 +12,7 @@ export const Footer = () => {
                 <img src={defImg} alt="link"/>
                 <img src={defImg} alt="link"/>
             </div>
+            <span>Lorem ipsum.</span>
         </div>
     )
 }

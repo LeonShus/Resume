@@ -3,7 +3,7 @@
     flex-direction: column;
 }
 
-.container p,a,h1,h2,h3 {
+.container span,p,a,h1,h2,h3 {
     background-color: white;
 }
 
