@@ -9,7 +9,7 @@
 .formContainer {
     width: 80%;
     border: 1px solid;
-    min-width: 360px;
+    min-width: 355px;
     margin: auto;
 }
 .form{
@@ -20,7 +20,7 @@
 .nameInp{
     width: 40%;
     height: 30px;
-    padding: 10px;
+    padding: 5px;
     font-size: 1.3rem;
 }
 .textInp{

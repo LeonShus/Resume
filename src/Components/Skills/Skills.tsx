@@ -5,7 +5,7 @@ import {Skill} from "./Skill/Skill";
 export const Skills = () => {
     return (
         <div className={styles.container}>
-            <h2>Skills</h2>
+            <h1>Skills</h1>
 
             <div className={styles.skillsContainer}>
                 <Skill/>

@@ -5,7 +5,6 @@ import {Nav} from "../Nav/Nav";
 export const Header = () => {
     return (
         <div className={styles.container}>
-            Header
             <Nav/>
         </div>
     )

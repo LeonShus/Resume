@@ -1,7 +1,7 @@
 .container{
     background-color: #1E90FF;
     width: 100vw;
-    height: 200px;
+    min-height: 200px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -9,7 +9,6 @@
 }
 .contentContainer {
     border: 1px solid;
-    min-width: 340px;
     width: 80%;
     padding: 20px;
     display: flex;
@@ -17,5 +16,7 @@
 
 }
 .contentContainer img{
-    height: 80px;
+    min-width: 50px;
+    width: 100px;
+    margin: 2px;
 }

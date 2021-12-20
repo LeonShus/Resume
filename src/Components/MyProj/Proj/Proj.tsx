@@ -5,9 +5,9 @@ import styles from "./Proj.module.css"
 export const Proj = () => {
     return (
         <div className={styles.container}>
-            <div>
+            <div className={styles.imgСontainer}>
                 <a href="">
-                    <img src={defPhoto} alt="My project photo link"/>
+                    Open
                 </a>
             </div>
             <div>

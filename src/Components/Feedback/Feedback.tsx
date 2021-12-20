@@ -22,10 +22,11 @@ export const Feedback = () => {
 
     return (
         <div className={styles.container}>
-            Feed
+            <h1>Feedback</h1>
             <div className={styles.formContainer}>
                 <form onSubmit={formik.handleSubmit}>
                     <div className={styles.form}>
+                        <span>Lorem</span>
                         <input
                             className={styles.nameInp}
                             name={"name"}
@@ -33,6 +34,7 @@ export const Feedback = () => {
                             onChange={formik.handleChange}
                             value={formik.values.name}
                         />
+                        <span>Lorem</span>
                         <textarea className={styles.textInp}
                                   name={"text"}
                                   cols={30}

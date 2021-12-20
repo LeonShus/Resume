@@ -1,7 +1,6 @@
 .skillContainer{
     margin: 5px;
     padding: 5px 0 5px 0;
-    min-width: 300px;
     border: 1px solid blue;
     display: flex;
     flex-direction: column;

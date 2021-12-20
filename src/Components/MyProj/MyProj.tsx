@@ -6,7 +6,7 @@ import {Proj} from "./Proj/Proj";
 export const MyProj = () => {
     return (
         <div className={styles.container}>
-            <h2>Мои Работы</h2>
+            <h1>My projects</h1>
             <div className={styles.projContainer}>
                 <Proj/>
                 <Proj/>

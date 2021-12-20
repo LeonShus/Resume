@@ -1,6 +1,19 @@
 .container {
     border: 1px solid;
 }
-.container img {
-    width: 30%;
+.imgСontainer{
+    width: 100%;
+    min-height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(https://ru.reactjs.org/logo-og.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.imgСontainer a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.8rem;
 }

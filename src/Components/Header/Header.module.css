@@ -3,6 +3,11 @@
     width: 100vw;
     height: 80px;
     display: flex;
-    justify-content: space-between;
+    justify-content: end;
     align-items: center;
+}
+
+.container a {
+    text-decoration: none;
+
 }
