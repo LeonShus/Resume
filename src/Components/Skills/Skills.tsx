@@ -1,11 +1,12 @@
 import React from "react"
 import styles from "./Skills.module.css"
 import {Skill} from "./Skill/Skill";
+import {Title} from "../../common/c2-components/c1-title/title";
 
 export const Skills = () => {
     return (
         <div className={styles.container}>
-            <h1>Skills</h1>
+            <Title title={"Skills"}/>
 
             <div className={styles.skillsContainer}>
                 <Skill/>
