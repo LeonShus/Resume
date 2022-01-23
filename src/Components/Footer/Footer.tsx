@@ -1,6 +1,6 @@
 import React from "react"
 import styles from "./Footer.module.css"
-import defImg from "../../default/img/React_IMG.jpeg"
+import defImg from "../../common/c3-img/React_IMG.jpeg"
 
 export const Footer = () => {
     return (

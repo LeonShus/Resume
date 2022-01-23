@@ -1,15 +1,11 @@
+@import "./common/c1-styles/sass/variables.sass";
+
 .container{
     display: flex;
     flex-direction: column;
+    border: 15px solid black;
 }
 
 .container span,p,a,h1,h2,h3 {
     background-color: white;
-}
-
-a{
-    font-size: 1.2rem;
-}
-p{
-    font-size: 1.2rem;
 }

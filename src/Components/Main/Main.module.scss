@@ -1,0 +1,51 @@
+@import "../../common/c1-styles/sass/variables";
+
+.container {
+  min-height: 100vh;
+  padding: 0 15px 0 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .contentContainer {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+
+    h1 {
+      font-family: $titleFontFamily;
+      font-size: 34px;
+      font-weight: 600;
+      line-height: 82px;
+    }
+
+    img {
+      width: 150px;
+      border-radius: 50%;
+      border: 5px solid $primaryColor;
+    }
+
+    .aboutMe {
+      position: relative;
+      padding: .2em 0;
+      font-size: 22px;
+      line-height: 42px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 2px;
+        background-color: $primaryColor;
+      }
+    }
+  }
+}

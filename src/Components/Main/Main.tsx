@@ -1,21 +1,23 @@
 import React from "react"
-import styles from "./Main.module.css"
-import defAvatar from "../../default/img/Avatar.png"
+import styles from "./Main.module.scss"
+import myPhoto from "../../common/c3-img/myPhoto01.png"
 
 export const Main = () => {
     return (
         <div className={styles.container}>
             <div className={styles.contentContainer}>
+
+                <img src={myPhoto} alt="Author Photo"/>
+
+                <h1>
+                    Hi, I'm Leonid Shustov!
+                </h1>
+
                 <div className={styles.aboutMe}>
-                    <h1>
-                        Привет!
-                    </h1>
-                    <p>Меня зовут Леонид</p>
-                    <p>Я Front-end разработчик</p>
+                    <p>Junior</p>
+                    <p>Front-end developer</p>
                 </div>
-                <div>
-                    <img src={defAvatar} alt="Author Photo"/>
-                </div>
+
 
             </div>
         </div>

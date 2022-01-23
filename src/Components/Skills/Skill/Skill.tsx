@@ -1,5 +1,5 @@
 import React from "react"
-import defImgForSkill from "../../../default/img/React_IMG.jpeg"
+import defImgForSkill from "../../../common/c3-img/React_IMG.jpeg"
 import styles from "./Skill.module.css"
 
 export const Skill = () => {
