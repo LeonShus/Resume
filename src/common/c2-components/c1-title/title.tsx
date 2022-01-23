@@ -7,7 +7,7 @@ type TitleType = {
 
 export const Title = ({title}: TitleType) => {
     return (
-        <div>
+        <div className={styles.container}>
             <h3>
                 {title}
             </h3>

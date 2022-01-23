@@ -3,7 +3,7 @@
 .container{
     display: flex;
     flex-direction: column;
-    border: 15px solid black;
+    border: 15px solid $textColor;
 }
 
 .container span,p,a,h1,h2,h3 {
