@@ -1,16 +1,22 @@
 import React from "react"
-import defImgForSkill from "../../../common/c3-img/React_IMG.jpeg"
 import styles from "./Skill.module.scss"
-import  { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faReact } from "@fortawesome/free-brands-svg-icons"
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
+import {SkillType} from "../../../App";
 
-export const Skill = () => {
+type SkillPropsType = {
+    skill: SkillType
+}
+
+export const Skill = ({skill}: SkillPropsType) => {
     return (
         <div className={styles.skillContainer}>
-            <FontAwesomeIcon icon={faReact} size={"6x"} color={'blue'}/>
+            <FontAwesomeIcon
+                icon={skill.titleIcon}
+                color={skill.iconColor}
+                size={"5x"}
+            />
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing
-                elit. Commodi corporis ipsam quia quisquam quo recusandae!
+                {skill.about}
             </p>
         </div>
     )

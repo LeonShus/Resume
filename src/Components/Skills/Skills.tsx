@@ -2,19 +2,23 @@ import React from "react"
 import styles from "./Skills.module.scss"
 import {Skill} from "./Skill/Skill";
 import {Title} from "../../common/c2-components/c1-title/title";
+import {SkillType} from "../../App";
 
-export const Skills = () => {
+type SkillsPropsType = {
+    skills: SkillType[]
+}
+
+export const Skills = ({ skills }: SkillsPropsType) => {
+
+    const skillsArr = skills.map(el => <Skill key={el.id} skill={el}/>)
+
     return (
         <div className={styles.container}>
 
             <Title title={"My Skills"}/>
 
             <div className={styles.skillsContainer}>
-                <Skill/>
-                <Skill/>
-                <Skill/>
-                <Skill/>
-                <Skill/>
+                {skillsArr}
             </div>
         </div>
 

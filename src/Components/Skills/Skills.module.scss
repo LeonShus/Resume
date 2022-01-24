@@ -5,10 +5,10 @@
     background-color: $secondaryColor;
     min-height: 100vh;
     .skillsContainer{
-        border: 1px solid;
+        padding: 0 20px 0 20px;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
-        align-items: center;
+        align-items: start;
     }
 }
