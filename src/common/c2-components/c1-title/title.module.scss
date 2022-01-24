@@ -1,5 +1,36 @@
+@import "../../c1-styles/sass/variables";
+
 .container{
   h3{
     margin-bottom: 6px;
+  }
+  span{
+    position: relative;
+    height: 5px;
+    width: 30px;
+    background-color: $primaryColor;
+    border-radius: 10px;
+    margin-left: calc(50% - 27px);
+    display: block;
+    &::before{
+      content: "";
+      position: absolute;
+      background-color: $primaryColor;
+      border-radius: 10px;
+      height: 100%;
+      width: 50%;
+      top: 0;
+      right: -60%;
+    }
+    &::after{
+      content: "";
+      position: absolute;
+      background-color: $primaryColor;
+      border-radius: 10px;
+      height: 100%;
+      width: 25%;
+      top: 0;
+      right: -100%;
+    }
   }
 }

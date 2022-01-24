@@ -6,6 +6,10 @@
   outline: 0;
 }
 
+::after, ::before {
+  transition: all .3s ease 0s;
+}
+
 body {
   padding: 10px;
   background-color: $mainBackground;
