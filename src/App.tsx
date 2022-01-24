@@ -21,6 +21,7 @@ export type ProjectType = {
     title: string
     screen: any
     about: string
+    url: string
 }
 export type BllType = {
     skills: SkillType[]
@@ -56,13 +57,15 @@ export const App = () => {
                 id: "WebSocial",
                 title: "Social",
                 screen: "https://ru.reactjs.org/logo-og.png",
-                about: " Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, quisquam!"
+                about: " Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, quisquam!",
+                url: ""
             },
             {
                 id: "Todos",
                 title: "Todos",
                 screen: "https://ru.reactjs.org/logo-og.png",
-                about: " Lorem ipsum dolor sit ame!"
+                about: " Lorem ipsum dolor sit ame!",
+                url: ""
             },
         ]
     }
