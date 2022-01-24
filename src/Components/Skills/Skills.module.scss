@@ -1,0 +1,14 @@
+@import "../../common/c1-styles/sass/variables";
+
+.container {
+    padding: 70px 0;
+    background-color: $secondaryColor;
+    min-height: 100vh;
+    .skillsContainer{
+        border: 1px solid;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+}

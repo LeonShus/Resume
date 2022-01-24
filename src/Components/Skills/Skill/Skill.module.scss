@@ -1,0 +1,14 @@
+.skillContainer{
+    position: relative;
+    max-width: 400px;
+    padding: 0 15px 0 15px;
+    border: 1px solid blue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img {
+        margin-bottom: 15px;
+        height: 100px;
+        width: 100px;
+    }
+}
