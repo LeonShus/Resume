@@ -1,19 +1,19 @@
 import React from "react"
 import defPhoto from "../../../default/img/React_IMG.jpeg"
-import styles from "./Proj.module.css"
+import styles from "./Proj.module.scss"
 
 export const Proj = () => {
     return (
         <div className={styles.container}>
-            <div className={styles.imgСontainer}>
+            <div className={styles.projScreen}>
                 <a href="">
                     Open
                 </a>
             </div>
-            <div>
-                <h3>
+            <div className={styles.about}>
+                <h4>
                     Name
-                </h3>
+                </h4>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, quisquam!
                 </p>

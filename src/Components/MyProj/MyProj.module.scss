@@ -1,11 +1,12 @@
 @import "../../common/c1-styles/sass/variables";
 
-.container {
+.container{
     padding: 70px 0;
-    background-color: $secondaryColor;
-    min-height: 80vh;
-    .skillsContainer{
+    background-color: #f8d56d;
+    min-height: 100vh;
+    .projContainer {
         padding: 0 20px 0 20px;
+        border: 1px solid;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;

@@ -1,0 +1,19 @@
+@import "../resume/src/common/c1-styles/sass/variables";
+
+.container {
+    max-width: 400px;
+    margin-bottom: 10px;
+    border: 1px solid;
+    background-color: $secondaryColor;
+    border-radius: 10px;
+    overflow: hidden;
+    .projScreen{
+        min-height: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url(https://ru.reactjs.org/logo-og.png);
+        background-size: cover;
+        background-position: center;
+    }
+}
