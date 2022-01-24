@@ -16,8 +16,15 @@ export type SkillType = {
     iconColor: string
     about: string
 }
+export type ProjectType = {
+    id: string
+    title: string
+    screen: any
+    about: string
+}
 export type BllType = {
     skills: SkillType[]
+    projects: ProjectType[]
 }
 
 export const App = () => {
@@ -43,6 +50,21 @@ export const App = () => {
                 about: "Lorem ipsum dolor sit amet, consectetur adipiselit."
             },
         ],
+
+        projects: [
+            {
+                id: "WebSocial",
+                title: "Social",
+                screen: "https://ru.reactjs.org/logo-og.png",
+                about: " Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, quisquam!"
+            },
+            {
+                id: "Todos",
+                title: "Todos",
+                screen: "https://ru.reactjs.org/logo-og.png",
+                about: " Lorem ipsum dolor sit ame!"
+            },
+        ]
     }
 
 
@@ -51,7 +73,7 @@ export const App = () => {
             {/*<Header/>*/}
             <Main/>
             <Skills skills={bll.skills}/>
-            <MyProj/>
+            <MyProj projects={bll.projects}/>
             <Feedback/>
             <Footer/>
         </div>
