@@ -4,6 +4,7 @@ import {useFormik} from "formik";
 import * as Yup from "yup"
 import { Title } from "../../common/c2-components/c1-title/title";
 import {Input} from "../../common/c2-components/c3-input/custom-inpt";
+import {Textarea} from "../../common/c2-components/c4-textarea/custom-textarea";
 
 export const Feedback = () => {
     const formik = useFormik({
@@ -32,16 +33,13 @@ export const Feedback = () => {
                     <form className={styles.form} action="">
                         <Input/>
                         <Input/>
+                        <Textarea/>
                     </form>
                 </div>
             </div>
         </div>
     )
 }
-
-
-
-
 
 
 // <input

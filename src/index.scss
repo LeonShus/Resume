@@ -32,4 +32,8 @@ body {
     font-size: 16px;
     font-weight: 600;
   }
+  input, textarea {
+    font-family: $textFontFamily;
+    color: #222;
+  }
 }
