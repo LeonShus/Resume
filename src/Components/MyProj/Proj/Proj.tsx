@@ -29,7 +29,6 @@ export const Proj = ({project}: ProjPropsType) => {
                     {project.about}
                 </p>
             </div>
-
         </div>
     )
 }

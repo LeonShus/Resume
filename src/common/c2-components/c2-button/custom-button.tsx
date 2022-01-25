@@ -1,7 +1,7 @@
 import React from "react"
 import styles from "./custom-button.module.scss"
 
-type ButtonType = "link" | 'button'
+type ButtonType = "link" | "button"
 
 type LinkBtnPropsType = {
     type?: "button" | "submit" | "reset" | undefined
@@ -10,9 +10,9 @@ type LinkBtnPropsType = {
     url?: string
 }
 
-export const Button = ({ type, buttonType, title, url }: LinkBtnPropsType) => {
+export const Button = ({type, buttonType, title, url}: LinkBtnPropsType) => {
 
-    if(buttonType === 'link'){
+    if (buttonType === "link") {
         return (
             <div className={styles.btnContainer}>
                 <a className={styles.element} href={`${url}`}>

@@ -1,7 +1,7 @@
 @import "../../c1-styles/sass/variables";
 
-.btnContainer{
-  .element{
+.btnContainer {
+  .element {
     background-color: $primaryColor;
     color: $mainBackground;
     border: 2px solid $primaryColor;
@@ -11,7 +11,8 @@
     font-weight: 900;
     letter-spacing: 2px;
     text-transform: capitalize;
-    &:hover{
+
+    &:hover {
       cursor: pointer;
       background-color: $secondaryColor;
       color: $textColor;

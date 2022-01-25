@@ -8,7 +8,7 @@ type SkillsPropsType = {
     skills: SkillType[]
 }
 
-export const Skills = ({ skills }: SkillsPropsType) => {
+export const Skills = ({skills}: SkillsPropsType) => {
 
     const skillsArr = skills.map(el => <Skill key={el.id} skill={el}/>)
 
@@ -21,6 +21,5 @@ export const Skills = ({ skills }: SkillsPropsType) => {
                 {skillsArr}
             </div>
         </div>
-
     )
 }

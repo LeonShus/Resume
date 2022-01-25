@@ -1,24 +1,27 @@
 @import "../resume/src/common/c1-styles/sass/variables";
 
 .container {
-    max-width: 320px;
-    margin: 0 15px 40px 15px;
-    border: 1px solid $textColor;
-    background-color: $secondaryColor;
-    border-radius: 10px;
-    overflow: hidden;
-    .projScreen{
-        min-height: 150px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-size: cover;
-        background-position: center;
+  max-width: 320px;
+  margin: 0 15px 40px 15px;
+  border: 1px solid $textColor;
+  background-color: $secondaryColor;
+  border-radius: 10px;
+  overflow: hidden;
+
+  .projScreen {
+    min-height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .about {
+    padding: 10px;
+
+    h4 {
+      margin-bottom: 4px;
     }
-    .about{
-        padding: 10px;
-        h4{
-            margin-bottom: 4px;
-        }
-    }
+  }
 }

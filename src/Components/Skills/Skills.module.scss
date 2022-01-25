@@ -1,15 +1,15 @@
 @import "../../common/c1-styles/sass/variables";
 
 .container {
-    padding: 70px 0 50px 0;
-    background-color: $secondaryColor;
-    min-height: 50vh;
-    width: 100%;
-    .skillsContainer{
-        padding: 0 20px 0 20px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: start;
-    }
+  padding: 70px 0 50px 0;
+  background-color: $secondaryColor;
+  min-height: 50vh;
+  width: 100%;
+
+  .skillsContainer {
+    padding: 0 20px 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }

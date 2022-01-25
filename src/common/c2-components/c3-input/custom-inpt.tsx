@@ -19,6 +19,5 @@ export const Input = ({name, value, placeholder, onChange}: InputPropsType) => {
                 onChange={onChange}
             />
         </div>
-
     )
 }

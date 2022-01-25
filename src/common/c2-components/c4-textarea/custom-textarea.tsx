@@ -18,6 +18,5 @@ export const Textarea = ({name, value, placeholder, onChange}: TextareaPropsType
                 onChange={onChange}
             />
         </div>
-
     )
 }

@@ -6,8 +6,7 @@ import {Main} from "./Components/Main/Main";
 import {MyProj} from "./Components/MyProj/MyProj";
 import {Feedback} from "./Components/Feedback/Feedback";
 import {Footer} from "./Components/Footer/Footer";
-import {faReact} from "@fortawesome/free-brands-svg-icons"
-import {faJsSquare} from "@fortawesome/free-brands-svg-icons"
+import {faJsSquare, faReact} from "@fortawesome/free-brands-svg-icons"
 import {faDotCircle} from "@fortawesome/free-regular-svg-icons"
 import todolistPrev from "./common/c3-img/TodolistPrev.png"
 import webSocialPrev from "./common/c3-img/WebSocialPrev.png"
