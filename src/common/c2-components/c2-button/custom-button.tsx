@@ -4,14 +4,15 @@ import styles from "./custom-button.module.scss"
 type ButtonType = "link" | 'button'
 
 type LinkBtnPropsType = {
-    type: ButtonType
+    type?: "button" | "submit" | "reset" | undefined
+    buttonType: ButtonType
     title: string
     url?: string
 }
 
-export const Button = ({ type, title, url }: LinkBtnPropsType) => {
+export const Button = ({ type, buttonType, title, url }: LinkBtnPropsType) => {
 
-    if(type === 'link'){
+    if(buttonType === 'link'){
         return (
             <div className={styles.btnContainer}>
                 <a className={styles.element} href={`${url}`}>
@@ -22,7 +23,7 @@ export const Button = ({ type, title, url }: LinkBtnPropsType) => {
     }
     return (
         <div className={styles.btnContainer}>
-            <button className={styles.element}>
+            <button type={type ? type : "button"} className={styles.element}>
                 {title}
             </button>
         </div>

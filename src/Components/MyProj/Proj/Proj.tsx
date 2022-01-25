@@ -19,7 +19,7 @@ export const Proj = ({project}: ProjPropsType) => {
                 className={styles.projScreen}
                 style={styleForScreen}
             >
-                <Button type={"link"} title={"Open"} url={project.url}/>
+                <Button buttonType={"link"} title={"Open"} url={project.url}/>
             </div>
             <div className={styles.about}>
                 <h4>

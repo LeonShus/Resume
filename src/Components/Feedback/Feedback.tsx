@@ -11,13 +11,13 @@ export const Feedback = () => {
     const formik = useFormik({
         initialValues: {
             name: "",
-            info: "",
-            text: ""
+            email: "",
+            message: ""
         },
         validationSchema: Yup.object({
             name: Yup.string()
                 .max(15, "Must be 15 characters or less"),
-            text: Yup.string()
+            message: Yup.string()
                 .max(20, "Must be 20 characters or less"),
         }),
         onSubmit: values => {
@@ -31,23 +31,33 @@ export const Feedback = () => {
             <div className={styles.feedbackContainer}>
                 <div className={styles.formContainer}>
                     <h4>Say Hello <span>;)</span></h4>
-                    <form className={styles.form} action="">
-                        <Input/>
-                        <Input/>
-                        <Textarea/>
-                        <Button type={"button"} title={"Send"}/>
+                    <form className={styles.form} onSubmit={formik.handleSubmit}>
+                        <Input
+                            name={"name"}
+                            value={formik.values.name}
+                            placeholder={"Name"}
+                            onChange={formik.handleChange}
+                        />
+                        <Input
+                            name={"email"}
+                            value={formik.values.email}
+                            placeholder={"Email"}
+                            onChange={formik.handleChange}
+                        />
+                        <Textarea
+                            name={"message"}
+                            value={formik.values.message}
+                            placeholder={"Message"}
+                            onChange={formik.handleChange}
+                        />
+                        <Button
+                            type={"submit"}
+                            title={"Send"}
+                            buttonType={"button"}
+                        />
                     </form>
                 </div>
             </div>
         </div>
     )
 }
-
-
-// <input
-//     className={styles.nameInp}
-//     name={"info"}
-//     type="text"
-//     onChange={formik.handleChange}
-//     value={formik.values.info}
-// />
