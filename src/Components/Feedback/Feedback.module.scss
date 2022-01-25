@@ -3,16 +3,13 @@
 .container{
     padding: 70px 0;
     min-height: 80vh;
-    background-color: #6ff876;
-    border: 1px solid red;
+    background-color: $secondaryColor;
     .feedbackContainer{
-        border: 1px solid blue;
         position: relative;
-        background-color: #2e1f54;
         padding: 20px;
         .formContainer{
             padding: 50px 15px;
-            background-color: #61dafb;
+            background-color: $mainBackground;
             border-radius: 20px;
             //box-shadow: 0 10px 50px rgba(0,0,0,0.08);
             h4{
@@ -26,7 +23,6 @@
                 }
             }
             .form{
-                background-color: #7e56e1;
                 padding: 10px;
             }
         }
