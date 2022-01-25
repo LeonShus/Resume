@@ -2,9 +2,10 @@ import React from "react"
 import styles from "./Feedback.module.scss"
 import {useFormik} from "formik";
 import * as Yup from "yup"
-import { Title } from "../../common/c2-components/c1-title/title";
+import {Title} from "../../common/c2-components/c1-title/title";
 import {Input} from "../../common/c2-components/c3-input/custom-inpt";
 import {Textarea} from "../../common/c2-components/c4-textarea/custom-textarea";
+import {Button} from "../../common/c2-components/c2-button/custom-button";
 
 export const Feedback = () => {
     const formik = useFormik({
@@ -26,7 +27,7 @@ export const Feedback = () => {
 
     return (
         <div className={styles.container}>
-            <Title title={'Feedback'}/>
+            <Title title={"Feedback"}/>
             <div className={styles.feedbackContainer}>
                 <div className={styles.formContainer}>
                     <h4>Say Hello <span>;)</span></h4>
@@ -34,6 +35,7 @@ export const Feedback = () => {
                         <Input/>
                         <Input/>
                         <Textarea/>
+                        <Button type={"button"} title={"Send"}/>
                     </form>
                 </div>
             </div>

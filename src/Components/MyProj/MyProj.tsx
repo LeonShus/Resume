@@ -8,13 +8,13 @@ type MyProjPropsType = {
     projects: ProjectType[]
 }
 
-export const MyProj = ({ projects }: MyProjPropsType) => {
+export const MyProj = ({projects}: MyProjPropsType) => {
 
     const projArr = projects.map(el => <Proj key={el.id} project={el}/>)
 
     return (
         <div className={styles.container}>
-            <Title title={'My Projects'}/>
+            <Title title={"My Projects"}/>
             <div className={styles.projContainer}>
                 {projArr}
             </div>
