@@ -9,6 +9,8 @@ import {Footer} from "./Components/Footer/Footer";
 import {faReact} from "@fortawesome/free-brands-svg-icons"
 import {faJsSquare} from "@fortawesome/free-brands-svg-icons"
 import {faDotCircle} from "@fortawesome/free-regular-svg-icons"
+import todolistPrev from "./common/c3-img/TodolistPrev.png"
+import webSocialPrev from "./common/c3-img/WebSocialPrev.png"
 
 export type SkillType = {
     id: string
@@ -56,16 +58,16 @@ export const App = () => {
             {
                 id: "WebSocial",
                 title: "Social",
-                screen: "https://ru.reactjs.org/logo-og.png",
+                screen: webSocialPrev,
                 about: " Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, quisquam!",
-                url: ""
+                url: "https://leonshus.github.io/SocialTS/"
             },
             {
                 id: "Todos",
                 title: "Todos",
-                screen: "https://ru.reactjs.org/logo-og.png",
-                about: " Lorem ipsum dolor sit ame!",
-                url: ""
+                screen: todolistPrev,
+                about: " Lorem ipsum ipsum ipsum dolor sit ame!",
+                url: "https://leonshus.github.io/Todolist-TS/"
             },
         ]
     }

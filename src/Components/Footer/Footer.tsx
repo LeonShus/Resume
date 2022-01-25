@@ -1,18 +1,14 @@
 import React from "react"
-import styles from "./Footer.module.css"
-import defImg from "../../common/c3-img/React_IMG.jpeg"
+import styles from "./Footer.module.scss"
 
 export const Footer = () => {
     return (
         <div className={styles.container}>
-            <h2>Leonid Shustov</h2>
             <div className={styles.contentContainer}>
-                <img src={defImg} alt="link"/>
-                <img src={defImg} alt="link"/>
-                <img src={defImg} alt="link"/>
-                <img src={defImg} alt="link"/>
+
+                    <p>Copyright © 2022 Leonid Shustov. All rights reserved</p>
+
             </div>
-            <span>Lorem ipsum.</span>
         </div>
     )
 }
