@@ -1,7 +1,9 @@
 import React from "react"
-import styles from "./Feedback.module.css"
+import styles from "./Feedback.module.scss"
 import {useFormik} from "formik";
 import * as Yup from "yup"
+import { Title } from "../../common/c2-components/c1-title/title";
+import {Input} from "../../common/c2-components/c3-input/custom-inpt";
 
 export const Feedback = () => {
     const formik = useFormik({
@@ -23,38 +25,29 @@ export const Feedback = () => {
 
     return (
         <div className={styles.container}>
-            <h1>Feedback</h1>
-            <div className={styles.formContainer}>
-                <form onSubmit={formik.handleSubmit}>
-                    <div className={styles.form}>
-                        <span>Lorem</span>
-                        <input
-                            className={styles.nameInp}
-                            name={"name"}
-                            type="text"
-                            onChange={formik.handleChange}
-                            value={formik.values.name}
-                        />
-                        <span>Lorem</span>
-                        <input
-                            className={styles.nameInp}
-                            name={"info"}
-                            type="text"
-                            onChange={formik.handleChange}
-                            value={formik.values.info}
-                        />
-                        <span>Lorem</span>
-                        <textarea className={styles.textInp}
-                                  name={"text"}
-                                  cols={30}
-                                  rows={10}
-                                  onChange={formik.handleChange}
-                                  value={formik.values.text}
-                        />
-                        <button type={"submit"}>Отправить</button>
-                    </div>
-                </form>
+            <Title title={'Feedback'}/>
+            <div className={styles.feedbackContainer}>
+                <div className={styles.formContainer}>
+                    <h4>Say Hello <span>;)</span></h4>
+                    <form className={styles.form} action="">
+                        <Input/>
+                        <Input/>
+                    </form>
+                </div>
             </div>
         </div>
     )
 }
+
+
+
+
+
+
+// <input
+//     className={styles.nameInp}
+//     name={"info"}
+//     type="text"
+//     onChange={formik.handleChange}
+//     value={formik.values.info}
+// />

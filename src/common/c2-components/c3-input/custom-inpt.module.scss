@@ -1,0 +1,11 @@
+@import "../../c1-styles/sass/variables";
+
+.container{
+  margin-bottom: 20px;
+  input{
+    display: block;
+    padding: 10px 24px;
+    font-size: 15px;
+    color: $textColor;
+  }
+}
