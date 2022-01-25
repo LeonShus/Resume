@@ -4,11 +4,12 @@
     padding: 70px 0;
     background-color: $secondaryColor;
     min-height: 50vh;
+    width: 100%;
     .skillsContainer{
         padding: 0 20px 0 20px;
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-around;
+        justify-content: center;
         align-items: start;
     }
 }
