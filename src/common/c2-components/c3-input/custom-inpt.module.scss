@@ -2,10 +2,19 @@
 
 .container{
   margin-bottom: 20px;
+  width: 100%;
   input{
     display: block;
-    padding: 10px 24px;
+    width: 76%;
+    height: 44px;
+    padding: 0 20px;
+    border: 1px solid #e3e3e3;
     font-size: 15px;
     color: $textColor;
+    border-radius: 30px;
+    &:focus{
+      border: 1px solid $primaryColor;
+      transition: border .4s;
+    }
   }
 }
