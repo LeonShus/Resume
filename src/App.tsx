@@ -69,20 +69,6 @@ export const App = () => {
                 about: " Lorem ipsum ipsum ipsum dolor sit ame!",
                 url: "https://leonshus.github.io/Todolist-TS/"
             },
-            {
-                id: "Todos",
-                title: "Todos",
-                screen: todolistPrev,
-                about: " Lorem ipsum ipsum ipsum dolor sit ame!",
-                url: "https://leonshus.github.io/Todolist-TS/"
-            },
-            {
-                id: "Todos",
-                title: "Todos",
-                screen: todolistPrev,
-                about: " Lorem ipsum ipsum ipsum dolor sit ame!",
-                url: "https://leonshus.github.io/Todolist-TS/"
-            },
         ]
     }
 
