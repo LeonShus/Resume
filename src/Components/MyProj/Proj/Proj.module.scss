@@ -1,8 +1,8 @@
 @import "../resume/src/common/c1-styles/sass/variables";
 
 .container {
-    max-width: 350px;
-    margin-bottom: 10px;
+    max-width: 320px;
+    margin: 0 15px 40px 15px;
     border: 1px solid $textColor;
     background-color: $secondaryColor;
     border-radius: 10px;
