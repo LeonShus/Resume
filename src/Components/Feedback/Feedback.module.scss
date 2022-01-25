@@ -4,16 +4,25 @@
     padding: 70px 0;
     min-height: 80vh;
     background-color: $secondaryColor;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     .feedbackContainer{
         position: relative;
         padding: 20px;
+        max-width: 800px;
+        width: 90%;
         .formContainer{
-            padding: 50px 15px;
+            padding: 50px 0px;
             background-color: $mainBackground;
             border-radius: 20px;
             box-shadow: 0 10px 50px rgba(0,0,0,0.08);
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            width: 100%;
             h4{
-                padding: 0px 10px;
+                padding: 0px 25px 0 25px;
                 line-height: 32px;
                 margin-bottom: 25px;
                 font-size: 20px;
@@ -23,7 +32,12 @@
                 }
             }
             .form{
-                padding: 10px;
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                button{
+                   margin: 0 20px;
+                }
             }
         }
 
