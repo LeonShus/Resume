@@ -18,6 +18,7 @@ export const MyProj = ({projects}: MyProjPropsType) => {
             <div className={styles.projContainer}>
                 {projArr}
             </div>
+
         </div>
     )
 }
