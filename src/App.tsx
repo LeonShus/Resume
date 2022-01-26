@@ -74,7 +74,6 @@ export const App = () => {
 
     return (
         <div className={styles.container}>
-            {/*<Header/>*/}
             <Main/>
             <Skills skills={bll.skills}/>
             <MyProj projects={bll.projects}/>
