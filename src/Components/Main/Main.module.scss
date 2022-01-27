@@ -1,10 +1,10 @@
 @import "../../common/c1-styles/sass/variables";
+@import "../../common/c1-styles/sass/mixins";
 
 .container {
-  min-height: 100vh;
   padding: 0 15px 0 15px;
-  display: flex;
-  flex-direction: column;
+  min-height: 100vh;
+  @include flexDisplay(column);
   align-items: center;
   justify-content: center;
 
