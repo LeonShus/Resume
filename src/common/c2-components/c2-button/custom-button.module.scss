@@ -14,9 +14,9 @@
 
     &:hover {
       cursor: pointer;
-      background-color: $secondaryColor;
+      background-color: $mainBackground;
       color: $textColor;
-      transition: background-color .5s;
+      transition: all .5s;
     }
   }
 }

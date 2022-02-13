@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./App.module.scss"
-// import {Header} from "./Components/Header/Header";
+import {Header} from "./Components/Header/Header";
 import {Skills} from "./Components/Skills/Skills";
 import {Main} from "./Components/Main/Main";
 import {MyProj} from "./Components/MyProj/MyProj";
@@ -37,13 +37,13 @@ export const App = () => {
                 id: "JavaScript",
                 titleIcon: faJsSquare,
                 iconColor: "#EFD81D",
-                about: "Lorem ipsum dolor sit amet, consectetur adipiselit.Lorem ipsum dolor sit amet, consectetur adipiselit."
+                about: "I use JavaScript with TypeScript."
             },
             {
                 id: "React",
                 titleIcon: faReact,
                 iconColor: "#61DAFB",
-                about: "Lorem ipsum dolor sit amet, consectetur adipiselit."
+                about: "I prefer to use React in conjunction with Redux, Thunk."
             },
             {
                 id: "Other",
@@ -73,12 +73,17 @@ export const App = () => {
 
 
     return (
-        <div className={styles.container}>
-            <Main/>
-            <Skills skills={bll.skills}/>
-            <MyProj projects={bll.projects}/>
-            <Feedback/>
-            <Footer/>
+        <div>
+            <Header/>
+            <div className={styles.container}>
+
+                <Main/>
+                <Skills skills={bll.skills}/>
+                <MyProj projects={bll.projects}/>
+                <Feedback/>
+                <Footer/>
+            </div>
         </div>
+
     );
 }
