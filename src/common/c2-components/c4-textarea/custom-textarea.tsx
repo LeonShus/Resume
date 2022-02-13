@@ -1,22 +1,19 @@
-import React from "react"
+import React, {DetailedHTMLProps, TextareaHTMLAttributes} from "react"
 import styles from "./custom-textarea.module.scss"
 
-export type TextareaPropsType = {
-    name?: string
-    value: string
-    placeholder: string
-    onChange?: any
+type DefaultInputPropsType = DetailedHTMLProps<TextareaHTMLAttributes<HTMLTextAreaElement>, HTMLTextAreaElement>
+
+type CustomTextAreaPropsType = DefaultInputPropsType & {
+    errorMessage?: string
 }
 
-export const Textarea = ({name, value, placeholder, onChange}: TextareaPropsType) => {
+export const Textarea = ({errorMessage, ...params}: CustomTextAreaPropsType) => {
     return (
         <div className={styles.container}>
             <textarea
-                name={name}
-                value={value}
-                placeholder={placeholder}
-                onChange={onChange}
+                {...params}
             />
+            {errorMessage && <div className={styles.error}>{errorMessage}</div>}
         </div>
     )
 }

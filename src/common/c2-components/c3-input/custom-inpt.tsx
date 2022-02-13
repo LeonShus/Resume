@@ -1,23 +1,21 @@
-import React from "react"
+import React, {DetailedHTMLProps, InputHTMLAttributes} from "react"
 import styles from "./custom-inpt.module.scss"
 
-export type InputPropsType = {
-    name?: string
-    value: string
-    placeholder: string
-    onChange?: any
+type DefaultInputPropsType = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>
+
+
+type CustomInputPropsType = DefaultInputPropsType & {
+    errorMessage?: string
 }
 
-export const Input = ({name, value, placeholder, onChange}: InputPropsType) => {
+
+export const Input = ({errorMessage, ...params}: CustomInputPropsType) => {
     return (
         <div className={styles.container}>
             <input
-                type="text"
-                name={name}
-                placeholder={placeholder}
-                value={value}
-                onChange={onChange}
+                {...params}
             />
+            {errorMessage && <div className={styles.error}>{errorMessage}</div>}
         </div>
     )
 }
