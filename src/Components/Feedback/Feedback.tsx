@@ -15,13 +15,13 @@ export const Feedback = () => {
     const form = useRef();
 
     const sendEmail = () => {
-
-        // emailjs.sendForm("service_03g1grc", "template_t6x4ayn", form.current, "user_6gzAKwhkPpO0BQ8F4jTGR")
-        //     .then((result) => {
-        //         console.log(result);
-        //     }, (error) => {
-        //         console.log(error);
-        //     });
+        form.current &&
+        emailjs.sendForm("service_03g1grc", "template_t6x4ayn", form.current, "user_6gzAKwhkPpO0BQ8F4jTGR")
+            .then((result) => {
+                console.log(result);
+            }, (error) => {
+                console.log(error);
+            });
         console.log(form.current)
     }
 
@@ -33,11 +33,14 @@ export const Feedback = () => {
         },
         validationSchema: Yup.object({
             name: Yup.string()
-                .max(15, "Must be 15 characters or less"),
+                .max(15, "Must be 15 characters or less")
+                .required("Required"),
             email: Yup.string()
-                .email().required(""),
+                .email("Must be valid")
+                .required("Required"),
             message: Yup.string()
-                .max(400, "Must be 400 characters or less"),
+                .max(400, "Must be 400 characters or less")
+                .required("Required"),
         }),
         onSubmit: values => {
             console.log(values);
@@ -55,28 +58,19 @@ export const Feedback = () => {
                         {/*@ts-ignore*/}
                         <form ref={form} className={styles.form} onSubmit={formik.handleSubmit}>
                             <Input
-                                name={"name"}
                                 placeholder={"Name"}
-                                value={formik.values.name}
-                                onChange={formik.handleChange}
+                                {...formik.getFieldProps('name')}
+                                errorMessage={formik.touched.name && formik.errors.name ? formik.errors.name : ""}
                             />
-                            {formik.touched.name && formik.errors.name ? (
-                                <div>{formik.errors.name}</div>
-                            ) : null}
                             <Input
-                                name={"email"}
                                 placeholder={"Email"}
-                                value={formik.values.email}
-                                onChange={formik.handleChange}
+                                {...formik.getFieldProps('email')}
+                                errorMessage={formik.touched.email && formik.errors.email ? formik.errors.email : ""}
                             />
-                            {formik.touched.email && formik.errors.email ? (
-                                <div>{formik.errors.email}</div>
-                            ) : null}
                             <Textarea
-                                name={"message"}
                                 placeholder={"Message"}
-                                value={formik.values.message}
-                                onChange={formik.handleChange}
+                                {...formik.getFieldProps('message')}
+                                errorMessage={formik.touched.message && formik.errors.message ? formik.errors.message : ""}
                             />
                             <Button
                                 type={"submit"}

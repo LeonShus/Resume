@@ -1,5 +1,6 @@
 import React, {DetailedHTMLProps, TextareaHTMLAttributes} from "react"
 import styles from "./custom-textarea.module.scss"
+import {Error} from "../c5-error/error";
 
 type DefaultInputPropsType = DetailedHTMLProps<TextareaHTMLAttributes<HTMLTextAreaElement>, HTMLTextAreaElement>
 
@@ -13,7 +14,7 @@ export const Textarea = ({errorMessage, ...params}: CustomTextAreaPropsType) => 
             <textarea
                 {...params}
             />
-            {errorMessage && <div className={styles.error}>{errorMessage}</div>}
+            {errorMessage && <Error errorMessage={errorMessage}/>}
         </div>
     )
 }
