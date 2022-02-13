@@ -6,7 +6,7 @@ import {Main} from "./Components/Main/Main";
 import {MyProj} from "./Components/MyProj/MyProj";
 import {Feedback} from "./Components/Feedback/Feedback";
 import {Footer} from "./Components/Footer/Footer";
-import {faJsSquare, faReact} from "@fortawesome/free-brands-svg-icons"
+import {faJsSquare, faReact, faCss3Alt} from "@fortawesome/free-brands-svg-icons"
 import {faDotCircle} from "@fortawesome/free-regular-svg-icons"
 import todolistPrev from "./common/c3-img/TodolistPrev.png"
 import webSocialPrev from "./common/c3-img/WebSocialPrev.png"
@@ -43,27 +43,33 @@ export const App = () => {
                 id: "React",
                 titleIcon: faReact,
                 iconColor: "#61DAFB",
-                about: "I prefer to use React in conjunction with Redux, Thunk."
+                about: "I prefer to use React in conjunction with Redux."
+            },
+            {
+                id: "Layout",
+                titleIcon: faCss3Alt,
+                iconColor: "#F16529",
+                about: "Layout: CSS3, Sass, Mui"
             },
             {
                 id: "Other",
                 titleIcon: faDotCircle,
                 iconColor: "",
-                about: "Lorem ipsum dolor sit amet, consectetur adipiselit."
+                about: "Also: Thunk, Axios, Jest, Git"
             },
         ],
 
         projects: [
             {
                 id: "WebSocial",
-                title: "Social",
+                title: "Social Net",
                 screen: webSocialPrev,
                 about: " Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, quisquam!",
                 url: "https://leonshus.github.io/SocialTS/"
             },
             {
-                id: "Todos",
-                title: "Todos",
+                id: "Todo",
+                title: "To Do List",
                 screen: todolistPrev,
                 about: " Lorem ipsum ipsum ipsum dolor sit ame!",
                 url: "https://leonshus.github.io/Todolist-TS/"
