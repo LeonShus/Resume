@@ -1,16 +1,19 @@
-import React from "react"
+import React, {ButtonHTMLAttributes, DetailedHTMLProps} from "react"
 import styles from "./custom-button.module.scss"
+
+type DefaultButtonPropsType = DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>
 
 type ButtonType = "link" | "button"
 
-type LinkBtnPropsType = {
+type CustomButtonPropsType = DefaultButtonPropsType & {
     type?: "button" | "submit" | "reset" | undefined
     buttonType: ButtonType
     title: string
     url?: string
 }
 
-export const Button = ({type, buttonType, title, url}: LinkBtnPropsType) => {
+
+export const Button = ({type, buttonType, title, url}: CustomButtonPropsType) => {
 
     if (buttonType === "link") {
         return (

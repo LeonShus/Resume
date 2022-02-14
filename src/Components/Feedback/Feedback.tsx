@@ -1,4 +1,4 @@
-import React, {useRef} from "react"
+import React, {useRef, useState} from "react"
 import styles from "./Feedback.module.scss"
 import {useFormik} from "formik";
 import * as Yup from "yup"
@@ -12,16 +12,23 @@ import emailjs from "@emailjs/browser";
 
 export const Feedback = () => {
 
-    const form = useRef();
+    const form = useRef()
+    const [sentIsDone, setSentIsDone] = useState(false)
+    const [isDisabled, setIsDisabled] = useState(false)
 
     const sendEmail = () => {
+        setIsDisabled(true)
         form.current &&
         emailjs.sendForm("service_03g1grc", "template_t6x4ayn", form.current, "user_6gzAKwhkPpO0BQ8F4jTGR")
             .then((result) => {
                 console.log(result);
+                setSentIsDone(true)
             }, (error) => {
                 console.log(error);
-            });
+            })
+            .finally(() => {
+                setIsDisabled(false)
+            })
         console.log(form.current)
     }
 
@@ -54,30 +61,45 @@ export const Feedback = () => {
                 <Title title={"Feedback"}/>
                 <div className={styles.feedbackContainer}>
                     <div className={styles.formContainer}>
-                        <h4>Say Hello <span>;)</span></h4>
-                        {/*@ts-ignore*/}
-                        <form ref={form} className={styles.form} onSubmit={formik.handleSubmit}>
-                            <Input
-                                placeholder={"Name"}
-                                {...formik.getFieldProps('name')}
-                                errorMessage={formik.touched.name && formik.errors.name ? formik.errors.name : ""}
-                            />
-                            <Input
-                                placeholder={"Email"}
-                                {...formik.getFieldProps('email')}
-                                errorMessage={formik.touched.email && formik.errors.email ? formik.errors.email : ""}
-                            />
-                            <Textarea
-                                placeholder={"Message"}
-                                {...formik.getFieldProps('message')}
-                                errorMessage={formik.touched.message && formik.errors.message ? formik.errors.message : ""}
-                            />
-                            <Button
-                                type={"submit"}
-                                title={"Send"}
-                                buttonType={"button"}
-                            />
-                        </form>
+
+                        {/*Message form*/}
+                        {!sentIsDone &&
+                        <>
+                            <h4>Say Hello <span>;)</span></h4>
+                            {/*@ts-ignore*/}
+                            <form ref={form} className={styles.form} onSubmit={formik.handleSubmit}>
+                                <Input
+                                    placeholder={"Name"}
+                                    {...formik.getFieldProps("name")}
+                                    errorMessage={formik.touched.name && formik.errors.name ? formik.errors.name : ""}
+                                />
+                                <Input
+                                    placeholder={"Email"}
+                                    {...formik.getFieldProps("email")}
+                                    errorMessage={formik.touched.email && formik.errors.email ? formik.errors.email : ""}
+                                />
+                                <Textarea
+                                    placeholder={"Message"}
+                                    {...formik.getFieldProps("message")}
+                                    errorMessage={formik.touched.message && formik.errors.message ? formik.errors.message : ""}
+                                />
+                                <Button
+                                    disabled={isDisabled}
+                                    type={"submit"}
+                                    title={"Send"}
+                                    buttonType={"button"}
+                                />
+                            </form>
+                        </>
+                        }
+                        {/*If sent done*/}
+                        {sentIsDone &&
+                        <div className={styles.mesSent}>
+                            <h4 className={styles.messageDone}>Message has been sent ! <br/>
+                                <div>I will reply as soon as I can</div>
+                            </h4>
+                        </div>
+                        }
                     </div>
                 </div>
             </Fade>
