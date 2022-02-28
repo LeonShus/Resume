@@ -28,9 +28,12 @@
     }
 
     img {
-      width: 150px;
+      width: 180px;
       border-radius: 50%;
       border: 5px solid $primaryColor;
+      @media (min-width: 650px){
+        width: 280px;
+      }
     }
 
     .aboutMe {

@@ -27,9 +27,9 @@ export const Proj = ({project}: ProjPropsType) => {
                 <h4>
                     {project.title}
                 </h4>
-                {/*<p>*/}
-                {/*    {project.about}*/}
-                {/*</p>*/}
+                <p>
+                    {project.about}
+                </p>
             </div>
         </div>
     )

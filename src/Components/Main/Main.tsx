@@ -1,6 +1,6 @@
 import React from "react"
 import styles from "./Main.module.scss"
-import myPhoto from "../../common/c3-img/myPhoto01.png"
+import myPhoto from "../../common/c3-img/myPhotoOrigin(1).jpg"
 import ReactTypingEffect from 'react-typing-effect'
 
 export const Main = () => {

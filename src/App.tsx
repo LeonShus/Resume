@@ -6,10 +6,11 @@ import {Main} from "./Components/Main/Main";
 import {MyProj} from "./Components/MyProj/MyProj";
 import {Feedback} from "./Components/Feedback/Feedback";
 import {Footer} from "./Components/Footer/Footer";
-import {faJsSquare, faReact, faCss3Alt} from "@fortawesome/free-brands-svg-icons"
+import {faCss3Alt, faJsSquare, faReact} from "@fortawesome/free-brands-svg-icons"
 import {faDotCircle} from "@fortawesome/free-regular-svg-icons"
-import todolistPrev from "./common/c3-img/TodolistPrev.png"
-import webSocialPrev from "./common/c3-img/WebSocialPrev.png"
+import todolistPrev from "./common/c3-img/to-do.jpeg"
+import webSocialPrev from "./common/c3-img/social-net.jpg"
+import cardsPrev from "./common/c3-img/cardsImg.jpg"
 
 export type SkillType = {
     id: string
@@ -43,35 +44,43 @@ export const App = () => {
                 id: "React",
                 titleIcon: faReact,
                 iconColor: "#61DAFB",
-                about: "I prefer to use React in conjunction with Redux."
+                about: "I prefer to use React in conjunction with Redux (Toolkit). Redux-Thunk"
             },
             {
                 id: "Layout",
                 titleIcon: faCss3Alt,
                 iconColor: "#F16529",
-                about: "Layout: CSS3, Sass, Mui"
+                about: "Layout: HTML5, CSS3, Scss, Mui"
             },
             {
                 id: "Other",
                 titleIcon: faDotCircle,
                 iconColor: "",
-                about: "Also: Thunk, Axios, Jest, Git"
+                about: "Also: Axios, REST API, Unit Tests (Jest), Storybook, Git"
             },
         ],
 
         projects: [
             {
+                id: "Playing Cards",
+                title: "Playing Cards",
+                screen: cardsPrev,
+                about: "TypeScript, React, Redux, Redux-thunk, Router-dom,  Axios,  Mui for some components, SCSS, Formik; \n" +
+                    "Team developement; Bug fixing, deployin.",
+                url: "https://leonshus.github.io/Cards/"
+            },
+            {
                 id: "WebSocial",
                 title: "Social Net",
                 screen: webSocialPrev,
-                about: " Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, quisquam!",
-                url: "https://leonshus.github.io/SocialTS/"
+                about: "TypeScript, React, Redux Toolkit, Redux-thunk, Router-dom, Axios, Mui for some component, SCSS, Formik; Bug fixing, deployin.",
+                url: "https://leonshus.github.io/Social-net/"
             },
             {
                 id: "Todo",
                 title: "To Do List",
                 screen: todolistPrev,
-                about: " Lorem ipsum ipsum ipsum dolor sit ame!",
+                about: "TypeScript, React, Redux Toolkit, Redux-thunk, Router-dom, Axios, Mui, Formik, Storybook; Bug fixing, deployin; Covering code with unit tests.",
                 url: "https://leonshus.github.io/Todolist-TS/"
             },
         ]
