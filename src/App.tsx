@@ -74,7 +74,7 @@ export const App = () => {
                 title: "Social Net",
                 screen: webSocialPrev,
                 about: "TypeScript, React, Redux Toolkit, Redux-thunk, Router-dom, Axios, Mui for some component, SCSS, Formik; Bug fixing, deployin.",
-                url: "https://leonshus.github.io/Social-net/"
+                url: "https://leonshus.github.io/Social-net/#/profile/19076"
             },
             {
                 id: "Todo",
