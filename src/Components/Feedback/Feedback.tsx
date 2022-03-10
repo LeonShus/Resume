@@ -19,7 +19,7 @@ export const Feedback = () => {
 
     //With my node
     const sendEmail = async (name: string, email: string, message: string) => {
-        const res = axios.post("https://smtp-nodejs-server-resume.herokuapp.com//sendMessage", {
+        const res = axios.post("https://smtp-nodejs-server-resume.herokuapp.com/sendMessage", {
             name,
             email,
             message
