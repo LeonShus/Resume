@@ -8,7 +8,8 @@ import {Textarea} from "../../common/c2-components/c4-textarea/custom-textarea";
 import {Button} from "../../common/c2-components/c2-button/custom-button";
 //@ts-ignore
 import Fade from "react-reveal/Fade"
-import emailjs from "@emailjs/browser";
+// import emailjs from "@emailjs/browser";
+import axios from "axios";
 
 export const Feedback = () => {
 
@@ -16,21 +17,32 @@ export const Feedback = () => {
     const [sentIsDone, setSentIsDone] = useState(false)
     const [isDisabled, setIsDisabled] = useState(false)
 
-    const sendEmail = () => {
-        setIsDisabled(true)
-        form.current &&
-        emailjs.sendForm("service_03g1grc", "template_t6x4ayn", form.current, "user_6gzAKwhkPpO0BQ8F4jTGR")
-            .then((result) => {
-                console.log(result);
-                setSentIsDone(true)
-            }, (error) => {
-                console.log(error);
-            })
-            .finally(() => {
-                setIsDisabled(false)
-            })
-        console.log(form.current)
+    //With my node
+    const sendEmail = async (name: string, email: string, message: string) => {
+        const res = axios.post("http://localhost:3010/sendMessage", {
+            name,
+            email,
+            message
+        })
+        console.log('send')
     }
+
+    //With library
+    // const sendEmail = () => {
+    //     setIsDisabled(true)
+    //     form.current &&
+    //     emailjs.sendForm("service_03g1grc", "template_t6x4ayn", form.current, "user_6gzAKwhkPpO0BQ8F4jTGR")
+    //         .then((result) => {
+    //             console.log(result);
+    //             setSentIsDone(true)
+    //         }, (error) => {
+    //             console.log(error);
+    //         })
+    //         .finally(() => {
+    //             setIsDisabled(false)
+    //         })
+    //     console.log(form.current)
+    // }
 
     const formik = useFormik({
         initialValues: {
@@ -50,8 +62,8 @@ export const Feedback = () => {
                 .required("Required"),
         }),
         onSubmit: values => {
-            console.log(values);
-            sendEmail()
+            const {name,email,message} = values
+            sendEmail(name,email,message)
         },
     })
 
