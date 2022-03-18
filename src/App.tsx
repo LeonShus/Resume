@@ -11,6 +11,7 @@ import {faDotCircle} from "@fortawesome/free-regular-svg-icons"
 import todolistPrev from "./common/c3-img/to-do.jpeg"
 import webSocialPrev from "./common/c3-img/social-net.jpg"
 import cardsPrev from "./common/c3-img/cardsImg.jpg"
+import goodsPrev from "./common/c3-img/goods.jpg"
 
 export type SkillType = {
     id: string
@@ -82,6 +83,13 @@ export const App = () => {
                 screen: todolistPrev,
                 about: "TypeScript, React, Redux Toolkit, Redux-thunk, Router-dom, Axios, Mui, Formik, Storybook; Bug fixing, deployin; Covering code with unit tests.",
                 url: "https://leonshus.github.io/Todolist-TS/"
+            },
+            {
+                id: "Goods",
+                title: "Goods",
+                screen: goodsPrev,
+                about: "TypeScript, React, Redux Toolkit, Router-dom, Mui, Formik, Firebase Storybook; Bug fixing, deployin; Covering code with unit tests.",
+                url: "https://leonshus.github.io/Goods-list/"
             },
         ]
     }
